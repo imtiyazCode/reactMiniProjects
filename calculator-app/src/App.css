@@ -1,3 +1,57 @@
-.App {
-  text-align: center;
+.calculator {
+  font-family: "Roboto", Arial, sans-serif !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.display {
+  outline: none;
+  border: none;
+  width: 196px;
+  height: 75px;
+  font-size: 2rem;
+  padding: 2px 12px;
+  text-align: right;
+  color: white;
+  background: #1c191c;
+}
+
+button {
+  width: 55px;
+  height: 60px;
+  font-size: 20px;
+  cursor: pointer;
+  border-top: 1px solid #666;
+  border-left: none;
+  border-bottom: none;
+}
+
+.num {
+  background-color: #E0E0E7;
+  border-right: 1px solid #666;
+}
+
+.clear {
+  background-color: #C9C8CC;
+  border-right: 1px solid #666;
+}
+
+.operator {
+  border-right: none;
+  background-color: #FB9419;
+}
+
+.num:hover {
+  background-color: #d9d9d9;
+}
+
+.clear:hover {
+  background-color: #aba9a9;
+}
+
+.operator:hover {
+  background-color: #cf790f;
 }
