@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Task from '../Task'
 import './TaskContainer.css'
 
-const TaskContainer = ({tasks, setTasks, dark}) => {
-    
-  const [todo, setTodo] = useState({ completed: false, title: "", description: "" })
+const TaskContainer = ({ tasks, setTasks, dark }) => {
+
+    const [todo, setTodo] = useState({ completed: false, title: "", description: "" })
 
     const handleSubmit = (e) => {
         e.preventDefault();
