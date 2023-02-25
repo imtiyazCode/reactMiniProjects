@@ -20,15 +20,12 @@
   background-color: antiquewhite;
 }
 
-/*  .app-title{   margin-top: 55px; } */
 .tasks-container {
   width: 550px;
   max-width: 65vw;
   margin: auto;
   margin-top: 55px;
-  /* / background-color: #fff7ed;/  */
   padding: 15px;
-  /* / box-shadow: #bfc0c033 0px 8px 24px;/  */
   border-radius: 5px;
 }
 
@@ -66,6 +63,7 @@
   border: none;
   margin: 0 4px;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .lightMode-add-btn {
