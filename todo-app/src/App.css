@@ -1,12 +1,139 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App {
+  text-align: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 55px;
+}
+
+.darkMode-App {
+  background-color: #333;
+  color: #fff;
+}
+
+.lightMode-App {
+  background-color: antiquewhite;
+}
+
+/*  .app-title{   margin-top: 55px; } */
+.tasks-container {
+  width: 550px;
+  max-width: 65vw;
+  margin: auto;
+  margin-top: 55px;
+  /* / background-color: #fff7ed;/  */
+  padding: 15px;
+  /* / box-shadow: #bfc0c033 0px 8px 24px;/  */
+  border-radius: 5px;
+}
+
+.single-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 5px 15px;
+  background-color: #c7e5ee;
+  border-radius: 3px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.action-btn {
+  padding: 15px;
+  align-items: center;
+  margin: 0 4px;
+  border: none;
+  border-radius: 3px;
+  font-size: 20px;
+  display: inline-flex;
+}
+
+.task-title {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.add-btn {
+  padding: 12px 25px;
+  box-shadow: none;
+  font-size: 16px;
+  border: none;
+  margin: 0 4px;
+  border-radius: 3px;
+}
+
+.lightMode-add-btn {
+  background-color: #49ff58;
+}
+
+.darkMode-add-btn {
+  color: #fff;
+  background-color: #07a714;
+}
+
+.add-btn:hover {
+  background-color: #02b611;
+}
+
+.input-form {
+  width: 850px;
+  max-width: 85vw;
+  margin: 30px auto;
+  outline: none;
+  display: flex;
+}
+
+.task-input {
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 70%;
+  margin: 0 2px;
+}
+
+.task-done-btn {
+  background: #a9fdb0;
+}
+
+.task-done-btn:hover {
+  background: #01bd7e;
+}
+
+.task-remove-btn {
+  background: #fda9a9;
+}
+
+.task-remove-btn:hover {
+  background: #ff8181;
+}
+
+.check-sun-btn,
+.check-moon-btn {
+  padding-top: 4.5px;
+  padding-left: 5px;
+}
+
+/* / Making responsive /  */
+@media only screen and (max-width: 600px) {
+  .input-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .task-input {
+    margin-bottom: 10px;
+  }
+
+  .task-input {
+    width: 90%;
   }
 }

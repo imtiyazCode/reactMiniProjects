@@ -1,0 +1,126 @@
+.box-tasks-container {
+    display: flex;
+    width: 900px;
+    max-width: 92vw;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 55px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.box-task-container {
+    display: flex;
+    text-align: left;
+    min-width: 250px;
+    flex: 1 0 21%;
+    margin: 5px;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+
+.lightMode-task-container {
+    background-color: bisque;
+}
+
+.darkMode-task-container {
+    color: #fff;
+    background-color: #444;
+}
+
+.box-task {
+    padding: 15px 0;
+    margin-left: 25px;
+}
+
+.box-task-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.darkMode-task-title {
+    color: #ff9a00;
+}
+
+.box-task-action {
+    padding: 15px 10px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-around;
+    border-left: 1px solid #8b8b8b;
+}
+
+.box-task-btn {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    margin: 0 4px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.lightMode-task-completed {
+    margin-bottom: 5px;
+    color: #27ce4b;
+    background-color: #fff;
+}
+
+.lightMode-task-completed:hover {
+    background-color: #27ce4b;
+    color: #fff;
+}
+
+.lightMode-task-remove {
+    color: #ce2727;
+    background-color: #fff;
+}
+
+.lightMode-task-remove:hover {
+    color: #fff;
+    background-color: #ce2727;
+}
+
+.darkMode-task-completed {
+    margin-bottom: 5px;
+    color: #00da12;
+    background-color: #e0e0e09a;
+}
+
+.darkMode-task-completed:hover {
+    background-color: #00da1275;
+    color: #e0e0e0;
+}
+
+.darkMode-task-remove {
+    color: #fc2222;
+    background-color: #e0e0e09a;
+}
+
+.darkMode-task-remove:hover {
+    color: #e0e0e0;
+    background-color: #f8000085;
+}
+
+/* / Making responsive / */
+ @media only screen and (max-width: 600px) {
+    .box-tasks-container {
+        margin-top: 24px;
+    }
+}
+
+@media only screen and (max-width: 310px) {
+    .box-task-container {
+        min-width: 75vw;
+    }
+
+    .box-tasks-container {
+        margin: auto auto;
+        padding: 5px;
+    }
+}

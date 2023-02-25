@@ -1,47 +1,60 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Task from './Components/Task';
+import Switch from "react-switch";
+import { BsSunFill, BsFillMoonStarsFill } from 'react-icons/bs'
 
 function App() {
-  const [title, setTitle] = useState('')
-  const [tasks, setTasks] = useState([
-    {
-      title: "Follow Codeclash",
-      completed: true
-    },
-    {
-      title: "Do your workout",
-      completed: true
-    },
-    {
-      title: "Hangout with friends",
-      completed: false
+
+  const [todo, setTodo] = useState({ completed: false, title: "", description: "" })
+  const [dark, setDark] = useState(true);
+  const [tasks, setTasks] = useState([])
+
+  useEffect(() => {
+    let myTodo = localStorage.getItem('myTodoTasks');
+    if(myTodo){
+      setTasks(JSON.parse(myTodo))
     }
-  ]);
 
-  const addTask = (e) => {
+  }, [])
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setTasks([...tasks, { title, completed: false }])
-    setTitle("")
+    if (todo.title) {
+      let newTask = { ...todo }
+      let newTasks = [...tasks, newTask]
+      setTasks(newTasks)
+      setTodo({ title: '', description: '', completed: false })
+      localStorage.setItem("myTodoTasks", JSON.stringify(newTasks));
+    }
   }
-
   const handleChange = (e) => {
-    setTitle(e.target.value)
+    setTodo({ ...todo, [e.target.name]: e.target.value })
   }
 
   return (
-    <div className="todo-container">
-      <div className="header">TODO - ITEMS</div>
-      <form action="addTask">
-        <input type="text" name="task" value={title} onChange={handleChange} />
-        <button type="submit" onClick={addTask}>Add Task</button>
-      </form>
-      <div className="tasks">
-        {tasks.map((task, index) => (
-          <Task tasks={tasks} setTasks={setTasks} task={task} key={index} index={index} />
-        ))}
+    <div className={`${dark ? 'darkMode-App' : "lightMode-App"} App`}>
+      <h1 className='app-title'>ToDo App</h1>
+      <Switch
+        checked={dark}
+        onChange={() => setDark(!dark)}
+        uncheckedIcon={<div className='check-sun-btn' ><BsSunFill size={18} /></div>}
+        checkedIcon={<div className='check-moon-btn'><BsFillMoonStarsFill size={18} /></div>} />
+
+      <form className='input-form' action='handleSubmit' onSubmit={handleSubmit}>
+        <input className='task-input task-input-title' name='title' type="text" placeholder='Enter Title' onChange={handleChange} value={todo.title} />
+        <input className='task-input task-input-desc' name='description' type="text" placeholder='Enter Description' onChange={handleChange} value={todo.description} />
+        <button className={`task-btn ${dark ? 'darkMode-add-btn' : 'lightMode-add-btn'} add-btn`} type='submit'>Add</button>
+      </form >
+
+      <div className={`${dark ? 'darkMode-box-tasks-container' : "lightMode-box-tasks-container"} box-tasks-container`}>
+        {tasks?.map((task, i) => {
+          // {
+          //     / <Task task={task} tasks={tasks} setTasks={setTasks} index={i} key={i} / > / }           
+          return <Task task={task} tasks={tasks} setTasks={setTasks} index={i} dark={dark} key={i} />
+        })}
       </div>
-    </div>
+    </div >
   );
 }
 
