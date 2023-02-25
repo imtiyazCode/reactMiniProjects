@@ -1,0 +1,73 @@
+.add-btn {
+    padding: 12px 25px;
+    box-shadow: none;
+    font-size: 16px;
+    border: none;
+    margin: 0 4px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.lightMode-add-btn {
+    background-color: #49ff58;
+}
+
+.darkMode-add-btn {
+    color: #fff;
+    background-color: #07a714;
+}
+
+.add-btn:hover {
+    background-color: #02b611;
+}
+
+.input-form {
+    width: 850px;
+    max-width: 85vw;
+    margin: 30px auto;
+    outline: none;
+    display: flex;
+}
+
+.task-input {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 70%;
+    margin: 0 2px;
+}
+
+.task-done-btn {
+    background: #a9fdb0;
+}
+
+.task-done-btn:hover {
+    background: #01bd7e;
+}
+
+.task-remove-btn {
+    background: #fda9a9;
+}
+
+.task-remove-btn:hover {
+    background: #ff8181;
+}
+
+/* / Making responsive /  */
+@media only screen and (max-width: 600px) {
+    .input-form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .task-input {
+        margin-bottom: 10px;
+    }
+
+    .task-input {
+        width: 90%;
+    }
+}
