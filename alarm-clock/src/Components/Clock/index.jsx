@@ -21,7 +21,7 @@ const Clock = () => {
     return (
         <div className="clock-container">
             <p className="time" style={{color: activeAlarms? "#232d31":"#fff"}}>{moment(time).format('hh:mm:ss A')}</p>
-            <p className="date" style={{color: activeAlarms? "#232d31":"#fff"}}>{time.toLocaleDateString()}</p>
+            <p className="date" style={{color: activeAlarms? "#232d31":"#fff"}}>{moment(time).format('DD/MM/YYYY')}</p>
         </div>
     )
 }
