@@ -1,28 +1,27 @@
 .clock-container {
-    max-width: 850px;
-    width: 85vw;
-    margin: 70px 10px 30px 10px;
-    padding: 30px;
-    border: 1px solid #333;
-    border-radius: 6px;
-    color: #fff;
-  }
-  
-  .time {
-    margin: 0 auto;
-    padding: 0px;
-    font-size: 7em;
-    font-weight: 600;
-    text-overflow: clip;
-    font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
-    text-shadow: 0 0 4px #80b5c4;
-  }
-  
-  .date {
-    font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
-    font-size: 36px;
-    text-align: center;
-    font-weight: 400;
-    text-shadow: 0 0 3px #80b5c4;
-  }
-  
+  max-width: 850px;
+  width: 85vw;
+  margin: 70px 10px 30px 10px;
+  padding: 30px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.time {
+  margin: 0 auto;
+  padding: 0px;
+  font-size: 7em;
+  font-weight: 600;
+  text-overflow: clip;
+  font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+  text-shadow: 0 0 4px #80b5c4;
+}
+
+.date {
+  font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 0 0 3px #80b5c4;
+}

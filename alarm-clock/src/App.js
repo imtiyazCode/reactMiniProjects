@@ -1,28 +1,28 @@
 import './App.css';
-import AlarmContainer from './Components/AlarmContainer';
+import { useEffect } from 'react';
 import Clock from './Components/Clock';
-import { useState } from 'react';
+import AlarmContainer from './Components/AlarmContainer';
+import { useDispatch, useSelector } from 'react-redux';
+import { setAlarmsFromStorage } from './redux/actions/AlarmAction';
 
 function App() {
-  const [time, setTime] = useState(new Date(Date.now()))
-  const [activeAlarms, setActiveAlarms] = useState([])
+  const activeAlarms = useSelector(state => state.alarmReducer.activeAlarm)
+  const dispatch = useDispatch()
 
-  const [alarms, setAlarms] = useState([])
+  useEffect(() => {
+    const myAlarms = localStorage.getItem('myAlarms');
+    if (myAlarms) {
+      dispatch(setAlarmsFromStorage(JSON.parse(myAlarms)))
+    }
+  }, []);
 
-  const updateTime = () => {
-    setTime(new Date(Date.now()))
-  }
-
-  const setAlarm = (alarm) => {
-    setAlarms([...alarms, alarm])
-  }
   return (
-    <div className="App">
-      <h1>Hello world</h1>
-      <Clock time={time} updateTime={updateTime} activeAlarms={activeAlarms} />
-      <AlarmContainer alarms={alarms} setAlarm={setAlarm} activeAlarms={activeAlarms} />
+    <div className="App" style={{ backgroundColor: activeAlarms ? activeAlarms.bgColor : "#000" }}>
+      <Clock />
+      <AlarmContainer />
     </div>
   );
+
 }
 
 export default App;

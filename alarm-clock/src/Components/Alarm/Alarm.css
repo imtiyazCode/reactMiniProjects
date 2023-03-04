@@ -1,0 +1,52 @@
+.alarm-container{
+    margin-top: 30px;
+    padding: 30px;
+    width: fit-content;
+    border: 1px solid #232d31;
+    border-radius: 5px;
+    margin: 10px 12px;
+    font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+    color: #232d31;
+}
+.alarm-time-container{
+    height: fit-content;
+}
+.alarm-time{
+    font-size: 3rem;
+    padding: 2.66px 4.755px;
+    font-weight: bold;
+    width: fit-content;
+    background-color: transparent;
+}
+.alarm-time-input{
+    font-size: 3rem;
+    font-weight: bold;
+    width: fit-content;
+}
+.alarm-actions{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.alarm-action-btn{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.alarm-remove-btn{
+    color: #ff0000;
+}
+.alarm-edit-btn{
+    color: #1b7200
+}
+.alarm-remove-btn:hover, .alarm-edit-btn:hover{
+    background-color: #232d31;
+}
+.alarm-remove-btn:hover{
+    color: #ff2222;
+}
+.alarm-edit-btn:hover{
+    color: #49ff12
+}
