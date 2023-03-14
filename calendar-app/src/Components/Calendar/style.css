@@ -1,0 +1,21 @@
+/* Calendar Container */
+.calendar {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .calendar-header h2 {
+    font-size: 24px;
+  }
+
+  .calendar-header button {
+    font-size: 18px;
+  }
+
+  .calendar-table th,
+  .calendar-table td {
+    font-size: 16px;
+  }
+}
