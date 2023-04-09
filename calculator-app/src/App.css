@@ -50,7 +50,7 @@ button {
 .operator-keys {
   color: #fff;
   border-right: none;
-  background-color: #FB9419;
+  background-color: #5142FF;
 }
 
 .digit-keys:hover {
@@ -62,7 +62,7 @@ button {
 }
 
 .operator-keys:hover {
-  background-color: #cf790f;
+  background-color: #3021d7;
 }
 .bottom-right-corner{
   border-bottom-right-radius: 6px;

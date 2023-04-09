@@ -1,0 +1,92 @@
+.quiz {
+  width: 600px;
+  margin: auto;
+  padding: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 7px;
+}
+
+.question-section {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.question-count {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: start;
+  color: rgb(9,9,121);
+}
+
+.question-text {
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+.answer-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+}
+.answer-options{
+  text-align: start;
+
+}
+.answer-options:hover{
+  background-color: #333;
+  color: #fff;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.score-section {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.score-section button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.score-section .playAgain-btn:hover {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.navigation-buttons{
+  margin-top: 35px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.navigation-buttons button:hover{
+  color: #fff;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
