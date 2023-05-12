@@ -1,0 +1,113 @@
+.tip-calculator-containor {
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 20px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tip-calculator {
+  width: 425px;
+}
+
+.tip-calculator h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tip-calculator label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.tip-calculator input,
+.tip-calculator select {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff4f;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.tip-calculator option{
+    color: #000;
+    padding: 5px 0;
+}
+
+.tip-calculator input:focus,
+.tip-calculator select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.tip-calculator button {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 15px 0;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.tip-calculator button:hover {
+  background-position: 100% 0;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.tip-calculator h2 {
+  font-size: 18px;
+}
+
+.tip-calculator .form-group {
+  margin-bottom: 15px;
+}
+
+.tip-calculator .checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tip-calculator .checkbox-group label {
+  margin-bottom: 0;
+}
+
+.tip-calculator .checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+.tip-calculator .checkbox-group input[type="number"] {
+  flex: 1;
+}
