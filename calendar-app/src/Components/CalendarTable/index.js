@@ -27,13 +27,13 @@ function CalendarTable({ date }) {
         <table className="calendar-table">
             <thead>
                 <tr>
-                    {WEEK_DAYS.map((day) => (
-                        <th>{day}</th>
+                    {WEEK_DAYS.map((day, i) => (
+                        <th key={i}>{day}</th>
                     ))}
                 </tr>
             </thead>
-            <tbody>{rows?.map((row) => (
-                <CalendarDay day={row.day} date={date} days={row.days} monthStart={monthStart} />
+            <tbody>{rows?.map((row, i) => (
+                <CalendarDay key={i} day={row.day} date={date} days={row.days} monthStart={monthStart} />
             ))}</tbody>
         </table>
     );

@@ -16,7 +16,7 @@ const Keypad = ({ handleClick, handleClear, handleEqual }) => {
           className={`${
             ['/', '*', '-', '+'].includes(label) ? 'operator-keys' :
             ['=', 'C'].includes(label) ? 'fun-keys' : 'digit-keys'
-          } ${index === 12 ? 'bottom-left-corner' : index === 14 ? 'bottom-right-corner' : ''}`}
+          }`}
           onClick={() => label === '=' ? handleEqual() : label === 'C' ? handleClear() : handleClick(label)}
         >
           {label}

@@ -14,6 +14,10 @@
 
 .calculator{
   margin: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 12px;
+  overflow: hidden;
+
 }
 .display {
   outline: none;
@@ -26,18 +30,15 @@
   text-align: right;
   color: white;
   background: #1c191c;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
 }
 
 .keypad {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-gap: 1px; */
+  border-radius: 12px;
   width: 800px;
   height: 900px;
   grid-template-rows: repeat(4, 1fr);
-  border-radius: 6px;
 }
 
 button {
@@ -75,10 +76,4 @@ button {
 
 .operator-keys:hover {
   background-color: #3021d7;
-}
-.bottom-right-corner{
-  border-bottom-right-radius: 6px;
-}
-.bottom-left-corner{
-  border-bottom-left-radius: 6px;
 }
