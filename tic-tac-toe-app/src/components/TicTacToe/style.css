@@ -1,8 +1,10 @@
 h1.app-title {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ff5722;
-  }
-  h1.app-title span {
-    color: #2196f3;
-  }
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ff5722;
+  text-align: center;
+}
+
+h1.app-title span {
+  color: #2196f3;
+}
